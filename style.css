@@ -1,0 +1,167 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Conteiner / ana tasiyici ozellikleri*/
+
+body{
+    background: linear-gradient(rgb(149, 10, 214),rgb(240, 6, 123)),url(fpn.jpeg);
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+
+ .container{
+    width: 100%;
+    height: 100vh;
+   
+    box-sizing: border-box; /* konrol bizde*/
+    padding: 0 10%;
+    color: white;
+}
+.navbar{
+    
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 100px;
+    cursor: pointer;
+    
+}
+
+.bi{
+    font-size: 50px;
+    cursor: pointer;
+    margin-right: 30px;
+    display: none;
+}
+
+.bi:hover{
+    transform: scale(1.2);
+    transition: .3s;
+}
+nav{
+   
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+   margin-left: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    position: relative;
+   
+}
+nav ul li a::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: blue;
+    bottom: -4px;
+    left: 0;
+    position: absolute;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 1s;
+}
+    
+
+/* satırlama one cıkan icerikleri yerlestirme*/
+.row{
+   
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    height: 90%;
+    overflow: scroll;
+}
+
+.col{
+    flex-basis: 50%;
+    margin-top: 20px;
+}
+h1{
+    font-size: 100px;
+}
+
+p{
+    font-size: 15px;
+    line-height: 20px;
+}
+
+button{
+    color: rgb(175, 123, 225);
+    font-size: 15px;
+    height: 40px;
+    width: 150px;
+    background-color: transparent;
+    border: solid rgb(27, 1, 27);
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(67, 15, 102);
+    border: none;
+    color: rgb(212, 0, 92);
+    transition: .2s;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.card{
+    width: 250px;
+    height: 300px;
+    background-color: darkmagenta;
+    display: inline-block;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(logo.jpeg);
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card p, h5{
+    text-shadow: 0 0 10px rgb(193, 14, 115);
+    text-indent: 10px;
+    padding: 2px;
+}
+
+
+
+@media (max-width:768px) {
+    nav{
+        display: none;
+    }
+    .bi{
+        display: block;
+    }
+    .row{
+        display: block;
+    }
+    .card{
+        width: 200px;
+    }
+}
